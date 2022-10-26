@@ -1,15 +1,47 @@
 <header>
-  <div class="container">
+  <div class="container container--header">
     <div class="logo">
       <a href="index.html" class="logo__link">
-        <svg class="logo__icon">
+        <svg class="logo__icon" width="66" height="52">
           <use href="./images/sprite.svg#icon-logo"></use></svg
       ></a>
     </div>
-    <button type="button">
-      <svg class="logo__icon" width="66" height="52">
+    <button
+      type="button"
+      class="menu-button js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg
+        class="logo__icon"
+        width="28"
+        height="28"
+        aria-label="Перекмикач мобільного меню"
+      >
         <use href="./images/sprite.svg#icon-mobile-menu"></use>
       </svg>
     </button>
+
+    <!-- Desltop&tablet menu -->
+    <div class="header-wrapper">
+      <nav class="nav">
+        <ul class="nav__list list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link link current">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Service</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link link">Menu</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="btn">Order Now</button>
+    </div>
   </div>
 </header>
