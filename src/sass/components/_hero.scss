@@ -1,0 +1,245 @@
+.hero {
+  padding-top: 60px;
+    padding-bottom: 134px;
+
+    @include tablet-max {
+      background-image: url('../images/hero/background-tablet-768-150-1x.png');
+  background-repeat: no-repeat;
+  background-position:bottom;
+    }
+
+    @include desktop {
+      padding-top: 159px; 
+      padding-bottom: 193px;
+
+      
+      background-image: url('../images/hero/background-desktop-1x.png');
+  background-repeat: no-repeat;
+  background-position:bottom;
+    }
+
+  color: $primary-text-color;
+  
+
+  &__title {
+    margin-bottom: 28px;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include tablet {
+      max-width: 537px;
+      margin-bottom: 44px;
+
+      font-size: 42px;
+    }
+
+    @include desktop {
+      max-width: 502px;
+      margin-bottom: 28px;
+
+      font-size: 48px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 28px;
+
+    line-height: 1.5;
+
+    @include tablet {
+      max-width: 336px;
+      margin-bottom: 40px;
+
+      font-size: 16px;
+    }
+
+    @include desktop {
+      max-width: 502px;
+
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.dishes {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile-max {
+    display: none;
+  }
+
+  @include tablet-max {
+    position: absolute;
+    top: 89px;
+    right: 32px;
+
+    width: 336px;
+    height: 320px;
+  }
+
+  @include desktop {
+    position: absolute;
+    bottom: -150px;
+    right: 16px;
+
+    width: 608px;
+    height: 580px;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+
+    @include tablet {
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+      border: 14px solid $yellow-color;
+    }
+
+    @include desktop {
+      width: 580px;
+      height: 580px;
+
+      border-radius: 50%;
+      border: 26px solid $yellow-color;
+    }
+  }
+
+  &__slyder {
+    position: relative;
+    display: flex;
+    left: 0;
+    transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include tablet-max {
+      width: 960px;
+      height: 320px;
+    }
+
+    @include desktop {
+      width: 1740px;
+      height: 580px;
+    }
+  }
+
+  &__img:not(:last-child) {
+    @include tablet-max {
+      margin-right: 14px;
+    }
+
+    @include desktop {
+      margin-right: 26px;
+    }
+  }
+}
+
+.dishes__button {
+  position: absolute;
+
+  border-radius: 8px;
+  border: none;
+
+  background-color: $white-color;
+
+  &:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .dishes__arrow,
+  &:focus .dishes__arrow {  
+    fill: $accent-arrow-color;
+  }
+
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+  &--prev {
+    @include tablet {
+      top: 50%;
+      left: 0px;
+      transform: translate(0, -50%);
+
+      width: 34px;
+      height: 28px;
+
+      padding: 3px 13px 3px 9px;
+    }
+
+    @include desktop {
+      top: 50%;
+      left: 0px;
+      transform: translate(0, -50%);
+
+      width: 48px;
+      height: 40px;
+
+      padding: 5px 18px 5px 13px;
+    }
+  }
+
+  &--next {
+    @include tablet {
+      top: 50%;
+      right: 0px;
+      transform: translate(0, -50%);
+
+      width: 34px;
+      height: 28px;
+
+      padding: 3px 9px 3px 13px;
+    }
+
+    @include desktop {
+      top: 50%;
+      right: 0px;
+      transform: translate(0, -50%);
+
+      width: 48px;
+      height: 40px;
+
+      padding: 5px 13px 5px 18px;
+    }
+  }
+}
+
+.dishes__arrow {
+  
+
+  fill: $primary-text-color;
+  @include tablet {
+    width: 11px;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 16px;
+    height: 29px;
+  }
+}
+
+.btn {
+  padding: 6px 18px;
+  border: none;
+  border-radius: 30px;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  background-color: $accent-color;
+  color: $primary-text-color;
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-btn-color;
+  }
+}

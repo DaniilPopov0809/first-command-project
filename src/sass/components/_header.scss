@@ -49,3 +49,9 @@
   text-decoration-color: $accent-color;
   color: $accent-color;
 }
+
+ .mob-nav__link.current {
+    @include mobile-max {
+    background-color: $accent-color;
+    }
+  }

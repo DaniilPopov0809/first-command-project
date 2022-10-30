@@ -1,10 +1,11 @@
-@import './vars';
-@import './mixin';
-@import './base';
-@import './utils';
-@import './mobile-menu';
-@import './container';
-@import './header';
-@import './logo';
-@import './hero';
-@import './offerings';
+@import './util/vars';
+@import './util/mixin';
+@import './util/utils';
+
+@import './components/base';
+@import './components/mobile-menu';
+@import './components/container';
+@import './components/header';
+@import './components/logo';
+@import './components/hero';
+@import './components/offerings';
