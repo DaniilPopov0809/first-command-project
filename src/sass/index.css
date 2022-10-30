@@ -6,7 +6,7 @@ body {
   background-color: #f5f5f5;
 }
 
-.section {
+.section--hero {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -51,14 +51,15 @@ svg {
   top: 0;
   right: 0;
   width: 130px;
-  height: 55px;
-  padding: 16px 70px 16px 16px;
+  height: 255px;
+  border-radius: 30px 0px 30px 30px;
   background-color: #ffffff;
   z-index: 999;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 .menu-container.is-open {
@@ -92,8 +93,19 @@ svg {
   }
 }
 
-.menu-container.is-open .nav .menu-container.is-open .nav {
+.menu-container.is-open .nav {
   display: block;
+}
+
+.mob-nav__link {
+  display: block;
+  padding: 16px 70px 16px 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  color: #000000;
+}
+.mob-nav__link:hover, .mob-nav__link:focus {
+  background-color: #bbf330;
 }
 
 .container {
@@ -110,7 +122,10 @@ svg {
 }
 @media screen and (min-width: 768px) {
   .container {
+    position: relative;
     max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -175,6 +190,12 @@ svg {
   color: #bbf330;
 }
 
+@media screen and (max-width: 767px) {
+  .mob-nav__link.current {
+    background-color: #bbf330;
+  }
+}
+
 .logo {
   padding: 10px 0;
 }
@@ -185,11 +206,131 @@ svg {
 .hero__title {
   margin-bottom: 28px;
   font-size: 28px;
-  line-height: 1.18;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 537px;
+    margin-bottom: 44px;
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    max-width: 502px;
+    margin-bottom: 28px;
+    font-size: 48px;
+  }
 }
 .hero__description {
   margin-bottom: 28px;
   line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .hero__description {
+    max-width: 336px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__description {
+    max-width: 502px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dishes {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .dishes {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+  }
+}
+.dishes__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .dishes__wrapper {
+    width: 336px;
+    height: 320px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .dishes__wrapper {
+    width: 580px;
+    height: 580px;
+  }
+}
+.dishes__img {
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .dishes__img {
+    border: 14px solid #FFE550;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .dishes__img {
+    border: 26px solid #FFE550;
+  }
+}
+.dishes__left-arrow {
+  position: absolute;
+  fill: #2c2c2c;
+  stroke: #2c2c2c;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+}
+@media screen and (min-width: 768px) {
+  .dishes__left-arrow {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 34px;
+    height: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .dishes__left-arrow {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 48px;
+    height: 40px;
+  }
+}
+.dishes__right-arrow {
+  position: absolute;
+  fill: #2c2c2c;
+  stroke: #2c2c2c;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+}
+@media screen and (min-width: 768px) {
+  .dishes__right-arrow {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 34px;
+    height: 28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .dishes__right-arrow {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 80px;
+    height: 60px;
+  }
 }
 
 .btn {
@@ -202,6 +343,16 @@ svg {
   background-color: #bbf330;
   color: #2c2c2c;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .test {
+    width: 48px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    background-image: url(../image/);
+  }
 }
 
 .test {

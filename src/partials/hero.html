@@ -1,5 +1,5 @@
-<section class="section hero">
-  <div class="container">
+<section class="hero" id="hero">
+  <div class="container container--hero">
     <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
     <p class="hero__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -7,5 +7,85 @@
       ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
     </p>
     <button type="button" class="btn">Order Now</button>
+
+    <div class="dishes">
+      <div class="dishes__wrapper">
+        <div class="dishes__slyder">
+          <picture class="dishes__img">
+            <source
+              srcset="
+                ./images/hero/dish1-desktop@1x.png 1x,
+                ./images/hero/dish1-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/dish1-desktop@1x.png 1x,
+                ./images/hero/dish1-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+
+            <source
+              srcset="
+                ./images/hero/dish1-tablet@1x.png 1x,
+                ./images/hero/dish1-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+
+            <img src="./images/hero/dish1-tablet@1x.png" alt="Dish № 1" />
+          </picture>
+          <picture class="dishes__img">
+            <source
+              srcset="
+                ./images/hero/dish2-desktop@1x.png 1x,
+                ./images/hero/dish2-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/hero/dish2-tablet@1x.png 1x,
+                ./images/hero/dish2-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+
+            <img src="./images/hero/dish2-tablet@1x.png" alt="Dish № 2" />
+          </picture>
+          <picture class="dishes__img">
+            <source
+              srcset="
+                ./images/hero/dish3-desktop@1x.png 1x,
+                ./images/hero/dish3-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+
+            <source
+              srcset="
+                ./images/hero/dish3-tablet@1x.png 1x,
+                ./images/hero/dish3-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+
+            <img src="./images/hero/dish3-tablet@1x.png" alt="Dish № 3" />
+          </picture>
+        </div>
+        <button type="button" class="dishes__button dishes__button--prev">
+          <svg class="dishes__arrow">
+            <use href="./images/sprite.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <button type="button" class="dishes__button dishes__button--next">
+          <svg class="dishes__arrow">
+            <use href="./images/sprite.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
