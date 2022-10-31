@@ -52,10 +52,7 @@ document
     }
     sliderLine.style.left = -offset + 'px';
     // Reset focus after click button
-
-    document.addEventListener('click', function () {
-      document.querySelector('.dishes__button--next').blur();
-    });
+    document.querySelector('.dishes__button--next').blur();
   });
 
 // Prev-button click handler
@@ -76,15 +73,35 @@ document
       }
     }
     sliderLine.style.left = -offset + 'px';
-
     // Reset focus after click button
-
-    document.addEventListener('click', function () {
-      document.querySelector('.dishes__button--prev').blur();
-    });
+    document.querySelector('.dishes__button--prev').blur();
+    
   });
 
 //  Return default dish if resize screen
 window.addEventListener('resize', function () {
   sliderLine.style.left = 0;
 });
+
+// document
+//   .querySelector('.dishes__button--next')
+//   .addEventListener('touchend', function () {
+//     // alert('Hello');
+//     document.activeElement.blur();
+//   });
+
+// document
+//   .querySelector('.dishes__button--next')
+//   .addEventListener('touchend', e => e.preventDefault());
+
+// const isMouseDown = false; // в примере будет работать только для 1ой кнопки
+// const button = document.querySelector('.dishes__button--next');
+// button.addEventListener('touchend', () => (isMouseDown = true));
+// button.addEventListener('touchstart', () => (isMouseDown = false));
+// button.addEventListener('focus', () => {
+//   if (isMouseDown) {
+//     button.blur();
+//   }
+// });
+
+
