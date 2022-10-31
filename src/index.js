@@ -75,7 +75,6 @@ document
     sliderLine.style.left = -offset + 'px';
     // Reset focus after click button
     document.querySelector('.dishes__button--prev').blur();
-    
   });
 
 //  Return default dish if resize screen
@@ -103,5 +102,3 @@ window.addEventListener('resize', function () {
 //     button.blur();
 //   }
 // });
-
-
