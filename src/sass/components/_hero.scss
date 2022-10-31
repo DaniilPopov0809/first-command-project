@@ -1,25 +1,49 @@
 .hero {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+
   padding-top: 60px;
+  padding-bottom: 160px;
+
+  background-image: url('../images/hero/background-mob-1x.png');
+
+  @include retina {
+    background-image: url('../images/hero/background-mob-2x.png');
+    background-size: contain;
+  }
+
+  @include tablet {
+    max-width: 768px;
+
+    padding-top: 60px;
     padding-bottom: 134px;
 
-    @include tablet-max {
-      background-image: url('../images/hero/background-tablet-768-150-1x.png');
-  background-repeat: no-repeat;
-  background-position:bottom;
-    }
+    background-image: url('../images/hero/background-tablet-1x.png');
 
-    @include desktop {
-      padding-top: 159px; 
-      padding-bottom: 193px;
-
-      
-      background-image: url('../images/hero/background-desktop-1x.png');
-  background-repeat: no-repeat;
-  background-position:bottom;
+    @include retina {
+      background-image: url('../images/hero/background-tablet-2x.png');
+      background-size: contain;
     }
+  }
+
+  @include desktop {
+    max-width: 1280px;
+
+    padding-top: 159px;
+    padding-bottom: 193px;
+
+    background-image: url('../images/hero/background-desktop-1x.png');
+
+    @include retina {
+      background-image: url('../images/hero/background-desktop-2x.png');
+      background-size: contain;
+    }
+  }
 
   color: $primary-text-color;
-  
 
   &__title {
     margin-bottom: 28px;
@@ -64,7 +88,6 @@
 }
 
 .dishes {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,6 +163,7 @@
 }
 
 .dishes__button {
+
   position: absolute;
 
   border-radius: 8px;
@@ -150,12 +174,19 @@
   &:active {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   }
-
-  &:hover .dishes__arrow,
-  &:focus .dishes__arrow {  
-    fill: $accent-arrow-color;
+  
+  &:active .dishes__arrow {
+  @include tablet-max{
+      fill: $accent-arrow-color;
+    }
   }
 
+  &:hover .dishes__arrow,
+  &:focus .dishes__arrow {
+    @include desktop {
+      fill: $accent-arrow-color;
+    }
+  }
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
   &--prev {
@@ -208,12 +239,11 @@
 }
 
 .dishes__arrow {
-  
-
   fill: $primary-text-color;
   @include tablet {
     width: 11px;
     height: 20px;
+
   }
 
   @include desktop {
