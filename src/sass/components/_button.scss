@@ -1,0 +1,35 @@
+.button__order {
+  border-radius: 30px;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color $animation;
+
+  &--header-hero {
+    padding: 6px 18px;
+    border: none;
+
+    background-color: $accent-color;
+    color: $primary-text-color;
+  }
+
+  &--header-hero:hover,
+  &--header-hero:focus {
+    background-color: $accent-btn-color;
+  }
+
+  &--offerings {
+    padding: 10px 22px;
+    border: 2px solid $primary-border-color;
+    background-color: $primary-background-color;
+  }
+
+  &--offerings:hover,
+  &--offerings:focus  {
+    border: 2px solid $hover-border-color;
+}
+}

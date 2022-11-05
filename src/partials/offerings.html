@@ -1,6 +1,63 @@
-<section>
-    <div class="container container--offerings">
+<section class="offerings">
+  <div class="container container--offerings">
+    <picture>
+      <!-- <source
+              srcset="
+                ./images/hero/dish3-desktop@1x.png 1x,
+                ./images/hero/dish3-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            /> -->
 
+      <source
+        srcset="
+          ./images/offerings/apple-320@1x.png 1x,
+          ./images/offerings/apple-320@2x.png 2x
+        "
+        media="(min-width: 320px)"
+      />
 
+      <img
+        src="./images/offerings/apple-320@1x.png"
+        alt="Apple"
+        class="offerings__img"
+      />
+    </picture>
+    <div class="offerings__wrapper">
+      <h2 class="offerings__title">What’s Special About Our Offerings</h2>
+      <p class="offerings__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat
+      </p>
+      <ul class="features list">
+        <li class="features__item">
+          <svg class="features__icon" width="48" height="48">
+            <use href="./images/sprite.svg#icon-rocket"></use>
+          </svg>
+          <h3 class="features__title">Fasest Delivery</h3>
+          <p class="features__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+        <li class="features__item">
+          <svg class="features__icon" width="48" height="48">
+            <use href="./images/sprite.svg#icon-touch"></use>
+          </svg>
+          <h3 class="features__title">Fasest Delivery</h3>
+          <p class="features__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+      </ul>
     </div>
+    <div class="offerings__btn-wrapper">
+      <button type="button" class="button__order button__order--offerings">
+        Order Now
+      </button>
+      <a href="#" class="offerings__link link">Read More</a>
+    </div>
+  </div>
 </section>

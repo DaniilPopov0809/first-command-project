@@ -1,8 +1,15 @@
 body {
+  min-width: 320px;
+
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.14;
 
+
+  padding-top: var(--body-padding-top);
   background-color: $primary-background-color;
+
+  @include tablet{
+    font-size: 16px;
+  }
 }
