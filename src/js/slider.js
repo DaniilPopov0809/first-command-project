@@ -36,26 +36,38 @@ document
   });
 
 //  Return default dish if resize screen
-window.addEventListener('resize', function () {
-  console.log('beforResize', offset);
-  preStepSlyder = stepSlyder;
-  console.log('preSlyder', preStepSlyder);
+// window.addEventListener('resize', function () {
+//   console.log('beforResize', offset);
+//   preStepSlyder = stepSlyder;
+//   console.log('preSlyder', preStepSlyder);
 
+//   // Image size delay
+//   setTimeout(function () {
+//     stepSlyder = document.querySelector('.dishes__img').clientWidth;
+//     console.log('stepSlider', stepSlyder);
+
+//     positionSlyder = (countImg - 1) * stepSlyder;
+//     console.log('positionSlyder', positionSlyder);
+//     console.log('afterResize', offset);
+//     position = offset / preStepSlyder;
+
+//     console.log('position', position);
+
+//     offset = stepSlyder * position;
+//     console.log('offset', offset);
+//     sliderLine.style.left = -offset + 'px';
+//     console.log('line', offset);
+//   }, 600);
+// });
+
+window.addEventListener('resize', function () {
   // Image size delay
   setTimeout(function () {
     stepSlyder = document.querySelector('.dishes__img').clientWidth;
-    console.log('stepSlider', stepSlyder);
-
     positionSlyder = (countImg - 1) * stepSlyder;
-    console.log('positionSlyder', positionSlyder);
-    console.log('afterResize', offset);
-    position = offset / preStepSlyder;
-
-    console.log('position', position);
-
-    offset = stepSlyder * position;
-    console.log('offset', offset);
-    sliderLine.style.left = -offset + 'px';
-    console.log('line', offset);
   }, 600);
+
+  offset = 0;
+
+  sliderLine.style.left = 0;
 });
