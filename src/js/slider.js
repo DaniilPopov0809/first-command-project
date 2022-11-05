@@ -1,6 +1,7 @@
 const sliderLine = document.querySelector('.dishes__slider'); //выбрать слайдер
 const countImg = document.getElementsByClassName('dishes__img').length; //кол-во картинок
 
+let screenSize = 0;
 let offset = 0; // переменная отступа
 let stepSlyder = document.querySelector('.dishes__img').clientWidth; //ширина шага слайдера
 let positionSlyder = (countImg - 1) * stepSlyder; //длина слайдера без послдней картинки
@@ -36,14 +37,19 @@ document
   });
 
 //  Return default dish if resize screen
-window.addEventListener('resize', function () {
-  console.log('beforResize', offset);
-  preStepSlyder = stepSlyder;
-  console.log('preSlyder', preStepSlyder);
 
-  // Image size delay
-  // setTimeout(function () {
+window.addEventListener('resize', function () {
+  screenSize = document.documentElement.clientWidth;
+  console.log('screenSize', screenSize);
+  if (screenSize > 768) {
+    console.log('beforResize', offset);
+    preStepSlyder = stepSlyder;
+    console.log('preSlyder', preStepSlyder);
+
+    // Image size delay
+    // setTimeout(function () {
     stepSlyder = document.querySelector('.dishes__img').clientWidth;
+
     console.log('stepSlider', stepSlyder);
 
     positionSlyder = (countImg - 1) * stepSlyder;
@@ -55,9 +61,11 @@ window.addEventListener('resize', function () {
 
     offset = stepSlyder * position;
     console.log('offset', offset);
+
     sliderLine.style.left = -offset + 'px';
     console.log('line', offset);
-  // }, 600);
+    // }, 600);
+  }
 });
 
 // window.addEventListener('resize', function () {
