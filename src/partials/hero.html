@@ -1,24 +1,57 @@
 <section class="hero" id="hero">
   <div class="container container--hero">
+    <picture>
+      <source
+        srcset="
+          ./images/hero/background-desktop-1x.png 1x,
+          ./images/hero/background-desktop-2x.png 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/hero/background-tablet-1x.png 1x,
+          ./images/hero/background-tablet-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        srcset="
+          ./images/hero/background-mob-1x.png 1x,
+          ./images/hero/background-mob-1x.png 2x
+        "
+        media="(min-width: 480px)"
+      />
+
+      <source
+        srcset="
+          ./images/hero/background-mob-1x.png 1x,
+          ./images/hero/background-mob-1x.png 2x
+        "
+        media="(max-width: 479px)"
+      />
+
+      <img
+        src="./images/hero/background-desktop-1x.png"
+        alt="hero-background"
+        class="hero__background"
+      />
+    </picture>
     <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
     <p class="hero__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis viverra
       ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
     </p>
-    <button type="button" class="btn">Order Now</button>
+    <button type="button" class="button__order button__order--header-hero">
+      Order Now
+    </button>
 
     <div class="dishes">
       <div class="dishes__wrapper">
-        <div class="dishes__slyder">
-          <picture class="dishes__img">
-            <source
-              srcset="
-                ./images/hero/dish1-desktop@1x.png 1x,
-                ./images/hero/dish1-desktop@2x.png 2x
-              "
-              media="(min-width: 1280px)"
-            />
+        <div class="dishes__slider">
+          <picture>
             <source
               srcset="
                 ./images/hero/dish1-desktop@1x.png 1x,
@@ -35,9 +68,13 @@
               media="(min-width: 768px)"
             />
 
-            <img src="./images/hero/dish1-tablet@1x.png" alt="Dish № 1" />
+            <img
+              src="./images/hero/dish1-tablet@1x.png"
+              alt="Dish № 1"
+              class="dishes__img"
+            />
           </picture>
-          <picture class="dishes__img">
+          <picture>
             <source
               srcset="
                 ./images/hero/dish2-desktop@1x.png 1x,
@@ -53,9 +90,13 @@
               media="(min-width: 768px)"
             />
 
-            <img src="./images/hero/dish2-tablet@1x.png" alt="Dish № 2" />
+            <img
+              src="./images/hero/dish2-tablet@1x.png"
+              alt="Dish № 2"
+              class="dishes__img"
+            />
           </picture>
-          <picture class="dishes__img">
+          <picture>
             <source
               srcset="
                 ./images/hero/dish3-desktop@1x.png 1x,
@@ -72,7 +113,11 @@
               media="(min-width: 768px)"
             />
 
-            <img src="./images/hero/dish3-tablet@1x.png" alt="Dish № 3" />
+            <img
+              src="./images/hero/dish3-tablet@1x.png"
+              alt="Dish № 3"
+              class="dishes__img"
+            />
           </picture>
         </div>
         <button type="button" class="dishes__button dishes__button--prev">

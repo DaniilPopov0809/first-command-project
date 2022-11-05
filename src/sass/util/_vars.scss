@@ -1,10 +1,51 @@
 $primary-text-color: #2c2c2c;
 $secondaryy-text-color: #000000;
+
 $primary-background-color: #f5f5f5;
+
 $accent-color: #bbf330;
-$yellow-color: #ffe550;
-$white-color: #ffffff;
-$accent-arrow-color: #7eb101;
+
+$primary-border-color: #7eb101;
+$second-border-color: #ffe550;
+
 $accent-btn-color: #b5ff00;
+$slider-button-bg: #ffffff;
+
+$hover-border-color: #597D00;
 
 $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+--body-padding-top: 0;
+}
+
+
+
+
+
+// $main-font: 'Roboto', sans-serif;
+
+// $main-text-color: #2C2C2C;
+// $second-text-color: #7EB101;
+// $nav-text-color: #000000;
+
+// $main-bg-color: #FEFEFE;
+// $accent-color: #BBF330;
+// $hover-color: #B5FF00;
+// $second-hover-color: #FFE550;
+
+// $main-border-color: #7EB101;
+// $second-border-color: #FFE550;
+// $hover-border-color: #597D00;
+
+// $slider-button-bg: #ffffff;
+
+// $mobile: 480px;
+// $mobile-end: 767px;
+// $tablet: 768px;
+// $tablet-end: 1279px;
+// $desktop: 1280px;
+
+// $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// $shadow-header: rgba(105, 105, 105, 0.1);
